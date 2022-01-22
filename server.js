@@ -2,6 +2,10 @@ let express = require("express");
 let app = express();
 let handlers = require("./handlers");
 
+let cors = require(`cors`);
+
+app.use(cors());
+
 app.use("/public", express.static(__dirname + "/public"));
 
 app.get("/", handlers.getHomepage);
