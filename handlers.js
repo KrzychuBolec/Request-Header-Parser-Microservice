@@ -7,7 +7,7 @@ let getHomepage = (req, res) => {
 
 let sendDetails = (req, res) => {
   res.json({
-    ipadress: req.ip,
+    ipaddress: req.ip,
     language: req.header("Accept-Language"),
     software: req.header("User-Agent"),
   });
